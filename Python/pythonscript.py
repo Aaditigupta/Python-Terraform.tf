@@ -2,7 +2,7 @@
 
 from python_terraform import *
 
-tf = Terraform(working_dir='/var/lib/jenkins/workspace/Terraform-Python/Python, variables={'count':enter})
+tf = Terraform(working_dir='/var/lib/jenkins/workspace/Terraform-Python/Python)
 tf.plan(no_color=IsFlagged, refresh=False, capture_output=True)
 approve = {"auto-approve": True}
 print(tf.init(reconfigure=True))
