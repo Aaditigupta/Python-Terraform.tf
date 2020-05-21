@@ -1,4 +1,4 @@
-enter = int(input('Enter number of instances: '))
+
 
 from python_terraform import *
 
