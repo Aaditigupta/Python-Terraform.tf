@@ -25,6 +25,7 @@ resource "null_resource" "remote-exec-1" {
     private_key = "${file(var.pvt_key)}"
     host        = "${aws_instance.example.public_ip}"
   }
+  }
 data "aws_availability_zones" "available" {}
 
 resource "aws_vpc" "myVPC" {
