@@ -49,10 +49,7 @@ variable "private_subnet-d-cidr" {
     type = "string"
     default = "192.168.0.80/28"
 }
-variable "key_name" {
-    type = "string"
-    default = "myAwsnew"
-}
+
 variable "AMIS" {
   type = "map"
   default = {
