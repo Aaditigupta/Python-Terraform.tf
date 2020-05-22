@@ -18,6 +18,13 @@ tags {
 Name="${format("test-%01d",count.index+1)}"
 }
 }
+resource "null_resource" "remote-exec-1" {
+    connection {
+    user        = "ubuntu"
+    type        = "ssh"
+    private_key = "${file(var.pvt_key)}"
+    host        = "${aws_instance.example.public_ip}"
+  }
 data "aws_availability_zones" "available" {}
 
 resource "aws_vpc" "myVPC" {
