@@ -1,8 +1,14 @@
+variable "key_name" {
+  default = "abhisheknew"
+}
+
+variable "pvt_key" {
+  default = "/root/.ssh/python-terra.pem"
+}
 variable "count" {
 default=2
 }
-variable "access_key" {}
-variable "secret_key" {}
+
 variable "aws-region" {
     type = "string"
     default = "us-east-1"
