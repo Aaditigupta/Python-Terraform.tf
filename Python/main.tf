@@ -5,7 +5,6 @@ terraform {
 
 }
 provider "aws" {
-  version = "1.41"
   region = "${var.aws-region}"
   }
 resource "aws_instance" "example" {
