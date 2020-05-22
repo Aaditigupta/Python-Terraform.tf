@@ -1,11 +1,6 @@
-terraform {
-  backend "local" {
-    path = "/tmp/terraform/workspace/terraform.tfstate"
-  }
 
-}
 provider "aws" {
-  version = "2.0"
+ 
   region = "${var.aws-region}"
   }
 resource "aws_instance" "example" {
@@ -14,10 +9,6 @@ resource "aws_instance" "example" {
 
 
 count="${var.count}"
-
-tags {
-Name="${format("test-%01d",count.index+1)}"
-}
 }
 resource "null_resource" "remote-exec-1" {
     connection {
