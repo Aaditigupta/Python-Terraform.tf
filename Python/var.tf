@@ -5,7 +5,7 @@ variable "key_name" {
 variable "pvt_key" {
   default = "/root/.ssh/python-terra.pem"
 }
-variable "count" {
+variable "num" {
 default=2
 }
 
