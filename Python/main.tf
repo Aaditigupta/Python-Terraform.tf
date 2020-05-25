@@ -8,7 +8,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
 
 
-count="${var.count}"
+count="${var.num}"
 }
 resource "null_resource" "remote-exec-1" {
     connection {
