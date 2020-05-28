@@ -51,7 +51,7 @@ variable "private_subnet-d-cidr" {
 }
 
 variable "AMIS" {
-  type = "string"
+  type = "map"
   default = "ami-085925f297f89fce1"
    
 }
