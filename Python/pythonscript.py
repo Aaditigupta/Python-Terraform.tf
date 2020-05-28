@@ -17,9 +17,9 @@ region = args['arg3']
 d = {}
 d[region] = instance_id
 tf = Terraform(working_dir='/var/lib/jenkins/workspace/Terraform-Python/Python', variables={'count':enter, 'aws-region':region , 'AMIs': d })
-tf.plan(no_color=IsFlagged, refresh=False, capture_output=True, out= "plan.out")
+tf.plan(no_color=IsFlagged, refresh=False, capture_output=True)
 #approve = {"auto-approve": True}
 print(tf.init(reconfigure=True))
-print(tf.apply("plan.out",skip_plan = True))
+print(tf.apply(skip_plan = True))
 #time.sleep(300)
 #tf.destroy()
