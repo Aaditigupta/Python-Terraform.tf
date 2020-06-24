@@ -50,6 +50,10 @@ variable "private_subnet-d-cidr" {
     default = "192.168.0.80/28"
 }
 
+variable "enable_vpc" {
+  description = "if set to true,enable existing vpc"
+  type = bool
+ }
 variable "AMIS" {
   type = "map"
   default =  {
