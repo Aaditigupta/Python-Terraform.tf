@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git '  '
+        git 'https://github.com/AbhishekPattnaik04/Python-Terraform.git'
       }
     }
    stage('Terraform') {
