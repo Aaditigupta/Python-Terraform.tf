@@ -51,7 +51,7 @@ variable "private_subnet-d-cidr" {
 }
 
 variable "enable_vpc" {
-  description = "if set to true,enable existing vpc"
+  description = "if set to true,create new vpc"
   type = bool
  }
 variable "AMIS" {
