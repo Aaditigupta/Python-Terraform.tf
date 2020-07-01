@@ -6,7 +6,7 @@ variable "pvt_key" {
   default = "/root/.ssh/python-terra.pem"
 }
 variable "num" {
-default=2
+default=1
 }
 
 variable "aws-region" {
