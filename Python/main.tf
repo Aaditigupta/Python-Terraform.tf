@@ -21,7 +21,6 @@ resource "null_resource" "remote-exec-1" {
 data "aws_availability_zones" "available" {}
 
 resource "aws_vpc" "myVPC" {
- count = var.enable_vpc ? 1 : 0 
     cidr_block              = "${var.myVPC-cidr}"
     enable_dns_hostnames    = true
 
