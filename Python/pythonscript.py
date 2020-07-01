@@ -25,13 +25,13 @@ state = int(args['arg4'])
 if bool(state) == False:
     vpc_id = args['arg5']
 if bool(state) == True:
-    tf = Terraform(working_dir='/var/lib/jenkins/workspace/infra Provisioning/Python', variables={'count':enter, 'aws-region':region , 'AMIs': d})
+    tf = Terraform(working_dir='/var/lib/jenkins/workspace/Infra Provisioning/Python', variables={'count':enter, 'aws-region':region , 'AMIs': d})
     tf.plan(no_color=IsFlagged, refresh=False, capture_output=True)
     #approve = {"auto-approve": True}
     print(tf.init(reconfigure=True))
     print(tf.apply(skip_plan = True))
 else:
-    tf = Terraform(working_dir='/var/lib/jenkins/workspace/infra Provisioning/Python/resource', variables={'count':enter, 'aws-region':region , 'AMIs': d, 'vpc_id': vpc_id})
+    tf = Terraform(working_dir='/var/lib/jenkins/workspace/Infra Provisioning/Python/resource', variables={'count':enter, 'aws-region':region , 'AMIs': d, 'vpc_id': vpc_id})
     tf.plan(no_color=IsFlagged, refresh=False, capture_output=True)
     #approve = {"auto-approve": True}
     print(tf.init(reconfigure=True))
